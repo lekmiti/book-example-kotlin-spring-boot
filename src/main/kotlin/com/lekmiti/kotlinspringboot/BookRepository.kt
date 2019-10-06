@@ -1,8 +1,8 @@
 package com.lekmiti.kotlinspringboot
 
-import org.springframework.data.repository.CrudRepository
+import org.springframework.data.mongodb.repository.MongoRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface BookRepository : CrudRepository<Book, Long> {
+interface BookRepository : MongoRepository<Book, Long> {
 }

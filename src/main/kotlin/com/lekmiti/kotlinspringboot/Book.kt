@@ -1,17 +1,15 @@
 package com.lekmiti.kotlinspringboot
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 
-@Entity
+
+@Document(collection = "book")
 data class Book(
         private val title: String,
         private val author: String,
         private val price: Float,
         private val ranking: Short,
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        private val id: Long = 0
+        private val id: String = ""
 )
